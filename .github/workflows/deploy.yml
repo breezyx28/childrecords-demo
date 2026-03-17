@@ -1,0 +1,64 @@
+name: Deploy to kat-jr.com
+
+on:
+  push:
+    branches:
+      - master
+      - production
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (Vite)
+        run: npm run build
+
+      - name: Package dist
+        run: |
+          rm -f dist.tar.gz
+          tar -czf dist.tar.gz -C dist .
+
+      - name: Copy dist bundle to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: kat-jr.com
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          source: dist.tar.gz
+          target: /tmp/childrecord-dist.tar.gz
+
+      - name: Extract dist to web root
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: kat-jr.com
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            set -e
+            WEB_ROOT="/var/www/html/childrecord"
+            sudo mkdir -p "$WEB_ROOT"
+
+            # Clear old build
+            sudo rm -rf "${WEB_ROOT:?}/"*
+
+            # Extract new build
+            sudo tar -xzf /tmp/childrecord-dist.tar.gz -C "$WEB_ROOT"
+
+            # Cleanup
+            rm -f /tmp/childrecord-dist.tar.gz
+
