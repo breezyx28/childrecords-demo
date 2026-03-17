@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "message": "Favourite tips fetched successfully.",
+  "data": [
+    {
+      "id": 1,
+      "title": "Bedtime Routine",
+      "tip": "Establish a consistent bedtime routine to help your child sleep better",
+      "category": "Sleep",
+      "icon": "moon",
+      "is_favourite": true,
+      "created_at": "2024-12-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Healthy Snacks",
+      "tip": "Offer fruit and vegetables as snacks instead of processed foods",
+      "category": "Nutrition",
+      "icon": "apple",
+      "is_favourite": true,
+      "created_at": "2024-11-28T14:30:00Z"
+    }
+  ]
+}
+

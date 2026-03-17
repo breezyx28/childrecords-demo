@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "message": "Files fetched successfully.",
+  "data": [
+  {
+    "id": 1,
+    "title": "Vaccination Record",
+    "type": "medical",
+    "date": "2024-11-15",
+    "description": "6-month vaccination schedule",
+    "file_url": "https://picsum.photos/seed/file1/400/600",
+    "file_type": "pdf",
+    "file_size": "245 KB",
+    "folder_id": 1,
+    "created_at": "2024-11-15T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "title": "First Ultrasound",
+    "type": "medical",
+    "date": "2024-03-20",
+    "description": "20-week pregnancy ultrasound",
+    "file_url": "https://picsum.photos/seed/file2/600/400",
+    "file_type": "image",
+    "file_size": "1.2 MB",
+    "folder_id": 1,
+    "created_at": "2024-03-20T14:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Birth Certificate",
+    "type": "document",
+    "date": "2020-03-15",
+    "description": "Official birth certificate",
+    "file_url": "https://picsum.photos/seed/file3/400/600",
+    "file_type": "pdf",
+    "file_size": "180 KB",
+    "folder_id": 2,
+    "created_at": "2020-03-16T09:00:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Growth Chart - Year 1",
+    "type": "medical",
+    "date": "2021-03-15",
+    "description": "First year growth measurements",
+    "file_url": "https://picsum.photos/seed/file4/800/600",
+    "file_type": "image",
+    "file_size": "890 KB",
+    "folder_id": 1,
+    "created_at": "2021-03-15T11:20:00Z"
+  }
+]}

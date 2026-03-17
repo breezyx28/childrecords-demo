@@ -1,11 +1,9 @@
 import React, { Suspense } from "react";
 import { FloatingCustomerButton } from "@/components/buttons/floating-customer-button";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import CookiePopup from "@/components/sections/landing-page/cookie-popup";
 
 const MainLayout = React.lazy(() => import("@/components/layouts/MainLayout"));
-const CookiePopup = React.lazy(
-  () => import("@/components/sections/landing-page/cookie-popup")
-);
 const Hero = React.lazy(() => import("@/components/sections/landing-page/hero"));
 const Faq = React.lazy(() => import("@/components/sections/landing-page/faq"));
 const MoreServices = React.lazy(

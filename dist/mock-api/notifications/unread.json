@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "New Milestone Achieved!",
+    "message": "Sarah has completed 'First Steps' milestone",
+    "type": "milestone",
+    "read": false,
+    "created_at": "2025-12-16T08:30:00Z",
+    "icon": "trophy",
+    "link": "/dashboard/milestones/1"
+  },
+  {
+    "id": 2,
+    "title": "Reminder: Doctor Appointment",
+    "message": "You have a doctor appointment tomorrow at 10:30 AM",
+    "type": "reminder",
+    "read": false,
+    "created_at": "2025-12-15T18:00:00Z",
+    "icon": "calendar",
+    "link": "/dashboard/reminders"
+  },
+  {
+    "id": 3,
+    "title": "New Tip Available",
+    "message": "Check out our new tip on sleep training",
+    "type": "tip",
+    "read": true,
+    "created_at": "2025-12-14T12:00:00Z",
+    "icon": "lightbulb",
+    "link": "/dashboard/tips/45"
+  },
+  {
+    "id": 4,
+    "title": "Growth Chart Updated",
+    "message": "Your child's growth chart has been updated with new measurements",
+    "type": "growth",
+    "read": true,
+    "created_at": "2025-12-13T15:45:00Z",
+    "icon": "chart",
+    "link": "/dashboard/growth-chart"
+  }
+]

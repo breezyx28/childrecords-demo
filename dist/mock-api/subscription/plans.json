@@ -1,0 +1,71 @@
+{
+  "current_plan": {
+    "id": 2,
+    "name": "Premium",
+    "slug": "premium",
+    "tier": "monthly",
+    "price": 29.99,
+    "old_price": 39.99,
+    "features": [
+      "Unlimited children profiles",
+      "Advanced growth tracking",
+      "Personalized milestones",
+      "Priority support",
+      "Ad-free experience",
+      "Export all records"
+    ],
+    "start_date": "2024-06-15",
+    "end_date": "2025-12-31",
+    "auto_renew": true,
+    "status": "active"
+  },
+  "available_plans": [
+    {
+      "id": 1,
+      "name": "Basic",
+      "slug": "basic",
+      "tier": "monthly",
+      "price": 9.99,
+      "features": [
+        "Up to 2 children profiles",
+        "Basic growth tracking",
+        "Standard milestones",
+        "Email support"
+      ],
+      "tag": null
+    },
+    {
+      "id": 2,
+      "name": "Premium",
+      "slug": "premium",
+      "tier": "monthly",
+      "price": 29.99,
+      "old_price": 39.99,
+      "features": [
+        "Unlimited children profiles",
+        "Advanced growth tracking",
+        "Personalized milestones",
+        "Priority support",
+        "Ad-free experience",
+        "Export all records"
+      ],
+      "tag": "Most Popular",
+      "current": true
+    },
+    {
+      "id": 3,
+      "name": "Premium Yearly",
+      "slug": "premium",
+      "tier": "yearly",
+      "price": 299.99,
+      "old_price": 359.99,
+      "features": [
+        "All Premium features",
+        "2 months free",
+        "Priority support",
+        "Early access to new features"
+      ],
+      "tag": "Best Value"
+    }
+  ]
+}

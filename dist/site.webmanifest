@@ -1,0 +1,27 @@
+{
+  "name": "Child Records",
+  "short_name": "Child Records",
+  "description": "Track your child's development, growth charts, milestones, and health records in one place.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#4F46E5",
+  "background_color": "#ffffff",
+  "lang": "en",
+  "categories": ["lifestyle", "health", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/logos/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logos/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

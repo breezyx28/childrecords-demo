@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "message": "Favourite articles fetched successfully.",
+  "data": [
+    {
+      "id": 1,
+      "title": "Understanding Sleep Patterns",
+      "excerpt": "Learn about healthy sleep habits for your baby",
+      "content": "Establishing good sleep patterns is crucial for your child's development...",
+      "image": "/assets/images/lessons/lesson-1.png",
+      "category": "Sleep",
+      "read_time": "5 min",
+      "is_favourite": true,
+      "created_at": "2024-11-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Nutrition Guide for Toddlers",
+      "excerpt": "Essential nutrients for growing toddlers",
+      "content": "Proper nutrition is the foundation of healthy growth...",
+      "image": "/assets/images/lessons/lesson-1.png",
+      "category": "Nutrition",
+      "read_time": "7 min",
+      "is_favourite": false,
+      "created_at": "2024-11-18T14:30:00Z"
+    }
+  ]
+}
+

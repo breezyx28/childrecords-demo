@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "message": "Child switched successfully",
+  "data": {
+    "id": 2,
+    "name": "Liam",
+    "birthday": "2023-03-20",
+    "gender": "male",
+    "photo": "https://api.example.com/storage/children/2.jpg",
+    "is_selected": true,
+    "created_at": "2024-01-15T10:30:00.000000Z",
+    "updated_at": "2024-01-15T10:30:00.000000Z"
+  }
+}

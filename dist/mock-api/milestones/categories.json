@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Physical Development",
+      "description": "Gross and fine motor skills development",
+      "icon": "running",
+      "color": "#FF6B6B",
+      "milestones_count": 15,
+      "progress": 73
+    },
+    {
+      "id": 2,
+      "name": "Cognitive Development",
+      "description": "Thinking, learning, and problem-solving skills",
+      "icon": "brain",
+      "color": "#4ECDC4",
+      "milestones_count": 12,
+      "progress": 58
+    },
+    {
+      "id": 3,
+      "name": "Language Development",
+      "description": "Communication and language skills",
+      "icon": "chat",
+      "color": "#45B7D1",
+      "milestones_count": 18,
+      "progress": 67
+    },
+    {
+      "id": 4,
+      "name": "Social-Emotional Development",
+      "description": "Understanding and managing emotions",
+      "icon": "heart",
+      "color": "#96CEB4",
+      "milestones_count": 10,
+      "progress": 80
+    }
+  ]
+}

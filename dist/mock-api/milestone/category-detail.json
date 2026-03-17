@@ -1,0 +1,49 @@
+{
+  "success": true,
+  "message": "Milestone details retrieved successfully",
+  "data": {
+    "id": 3,
+    "title": "Jumps with both feet",
+    "description": "Child can jump off the ground with both feet",
+    "age_range": "24-30 months",
+    "from": 24,
+    "to": 30,
+    "completed": false,
+    "completion_date": null,
+    "category": {
+      "id": 1,
+      "name": "Physical Development",
+      "icon": "running",
+      "color": "#FF6B6B"
+    },
+    "activities": [
+      {
+        "id": 7,
+        "title": "Jumping Games",
+        "description": "Fun jumping activities for toddlers",
+        "photo": "/assets/images/lessons/lesson-1.png",
+        "icon": "jump",
+        "views": 23,
+        "tips_count": 4,
+        "articles_count": 2
+      }
+    ],
+    "tips": [
+      {
+        "id": 15,
+        "title": "Make jumping fun",
+        "content": "Use songs and games to encourage jumping...",
+        "views": 45
+      }
+    ],
+    "articles": [
+      {
+        "id": 8,
+        "title": "When do toddlers start jumping?",
+        "content": "Most toddlers start jumping between 24-30 months...",
+        "photo": "/assets/images/lessons/lesson-1.png",
+        "views": 67
+      }
+    ]
+  }
+}

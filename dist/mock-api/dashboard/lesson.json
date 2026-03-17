@@ -1,0 +1,26 @@
+{
+    "success": true,
+    "message": "Lessons fetched successfully.",
+    "data": [
+      {
+        "id": 1,
+        "name": "Introduction to Child Development",
+        "title": "Introduction to Child Development",
+        "body": "Learn the basics of tracking your child's growth, key milestones, and how to support development at each stage.",
+        "description": "Learn the basics of tracking your child's growth",
+        "photo": "/assets/images/lessons/lesson-1.png",
+        "duration": "5 min",
+        "completed": false
+      },
+      {
+        "id": 2,
+        "name": "Understanding Milestones",
+        "title": "Understanding Milestones",
+        "body": "How to use the milestones feature, when to expect certain skills, and when to talk to your pediatrician.",
+        "description": "How to use the milestones feature",
+        "photo": "/assets/images/lessons/lesson-1.png",
+        "duration": "8 min",
+        "completed": true
+      }
+    ]
+  }

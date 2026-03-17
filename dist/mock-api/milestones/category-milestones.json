@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "data": {
+    "category": {
+      "id": 1,
+      "name": "Physical Development",
+      "icon": "running",
+      "color": "#FF6B6B"
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Walks independently",
+        "description": "Child can walk without support",
+        "age_range": "12-18 months",
+        "completed": true,
+        "completion_date": "2022-08-15",
+        "activities_count": 5,
+        "tips_count": 8,
+        "articles_count": 3
+      },
+      {
+        "id": 2,
+        "title": "Runs steadily",
+        "description": "Child can run with good balance",
+        "age_range": "18-24 months",
+        "completed": true,
+        "completion_date": "2023-02-20",
+        "activities_count": 4,
+        "tips_count": 6,
+        "articles_count": 2
+      },
+      {
+        "id": 3,
+        "title": "Jumps with both feet",
+        "description": "Child can jump off the ground with both feet",
+        "age_range": "24-30 months",
+        "completed": false,
+        "completion_date": null,
+        "activities_count": 6,
+        "tips_count": 7,
+        "articles_count": 4
+      }
+    ]
+  }
+}

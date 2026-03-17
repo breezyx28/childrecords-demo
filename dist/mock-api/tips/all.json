@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "message": "Tips fetched successfully.",
+  "data": [
+    {
+      "id": 1,
+      "title": "Tummy Time Tips",
+      "description": "Make tummy time fun and effective",
+      "category": "Physical Development",
+      "age_range": "0-6 months",
+      "image": "/assets/images/lessons/lesson-1.png",
+      "content": "Start with short sessions and gradually increase duration...",
+      "likes": 245,
+      "is_favourite": false
+    },
+    {
+      "id": 2,
+      "title": "Introducing Solid Foods",
+      "description": "When and how to start solid foods",
+      "category": "Nutrition",
+      "age_range": "4-6 months",
+      "image": "/assets/images/lessons/lesson-1.png",
+      "content": "Watch for signs of readiness before introducing solids...",
+      "likes": 312,
+      "is_favourite": true
+    }
+  ]
+}
+

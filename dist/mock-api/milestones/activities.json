@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "message": "Activities retrieved successfully",
+  "data": {
+    "daily_activities": [
+      {
+        "id": 1,
+        "milestone_id": 1,
+        "title": "Tummy Time",
+        "description": "Place baby on tummy for 2-3 minutes",
+        "completed": true,
+        "scheduled_at": "2024-01-15T09:00:00.000000Z",
+        "completed_at": "2024-01-15T09:15:00.000000Z"
+      },
+      {
+        "id": 2,
+        "milestone_id": 2,
+        "title": "Read a Book",
+        "description": "Read a picture book to your child",
+        "completed": false,
+        "scheduled_at": "2024-01-15T14:00:00.000000Z",
+        "completed_at": null
+      }
+    ],
+    "completion_rate": 50
+  }
+}

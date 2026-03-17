@@ -1,0 +1,1 @@
+.hero-imgs-cards-wrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;animation:scroll 20s linear infinite;position:relative}.hero-img-card{position:relative}.hero-img-card:nth-child(2n){top:5rem}@keyframes scroll{0%{transform:translateY(0)}to{transform:translateY(-100%)}}.hero-imgs-cards-wrapper:hover{animation-play-state:paused}
