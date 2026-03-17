@@ -1,0 +1,47 @@
+export const monthly = [
+  {
+    id: 2,
+    slug: "basic",
+    tag: null,
+    title: "Basic monthly",
+    price: "14.99",
+    period: "month",
+    tier: "monthly",
+    subtitle: "Unlimited features",
+    features: [
+      "Add 1 child",
+      "Tracking milestone of development",
+      "Monitoring growth and weight",
+      "Daily tips and articles",
+      "Share your lovely moments by uploading your picture",
+      "Monthly updating report",
+      "Uploading medical report",
+      "Reminders",
+      "Support",
+    ],
+  },
+];
+export const yearly = [
+  {
+    id: 2,
+    slug: "basic",
+    tag: null,
+    title: "Basic yearly",
+    price: "70.99",
+    old_price: "239.76",
+    period: "year",
+    tier: "yearly",
+    subtitle: "Unlimited features",
+    features: [
+      "Add 1 child",
+      "Tracking milestone of development",
+      "Monitoring growth and weight",
+      "Daily tips and articles",
+      "Share your lovely moments by uploading your picture",
+      "Monthly updating report",
+      "Uploading medical report",
+      "Reminders",
+      "Support",
+    ],
+  },
+];

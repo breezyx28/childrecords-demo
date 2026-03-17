@@ -1,0 +1,41 @@
+.input-container {
+  @apply relative w-full flex flex-col gap-y-[8px] z-10;
+}
+.input-container .input-section {
+  @apply flex gap-x-[8px] border-2 rounded-[16px] px-[12px] py-[15px];
+}
+.input-container.input-focused .input-section {
+  @apply border-2 border-primary-600;
+}
+.input-container .input-section .input-wrapper {
+  @apply relative flex items-center w-full;
+}
+.input-container .input-section .input-wrapper .input-label {
+  @apply absolute h-[20px] text-[#83868B] leading-[20.8px] left-0 transition-all;
+}
+.input-label-focused {
+  @apply top-[-15px] text-[12px] leading-[18.2px];
+}
+.input-label-blur {
+  @apply top-0 text-[14px];
+}
+.input-container .input-section .input-wrapper > input {
+  @apply focus:outline-none bg-transparent w-full font-normal text-black text-[14px] leading-[20.8px];
+}
+.input-container .input-section .input-wrapper > input::placeholder {
+  @apply text-[#83868B];
+}
+
+/* File Upload */
+
+.profile-upload-input {
+  @apply w-[80px] h-[80px] bg-[#F8F9FA] border-2 border-[#F1F3F6] rounded-full flex flex-col justify-center items-center cursor-pointer;
+}
+
+button.tab-input-switch {
+  @apply w-full rounded-full inline data-[state=active]:bg-primary-600 shadow-[none] flex items-center justify-center;
+}
+
+button.tab-input-switch[data-state="active"] > .tab-input-icon {
+  @apply text-white;
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "date": "2020-04-15",
+    "age_months": 1,
+    "weight": 4.2,
+    "height": 52,
+    "head_circumference": 36.5,
+    "notes": "First checkup"
+  },
+  {
+    "id": 2,
+    "date": "2020-06-15",
+    "age_months": 3,
+    "weight": 6.1,
+    "height": 60,
+    "head_circumference": 40.2,
+    "notes": "Growing well"
+  },
+  {
+    "id": 3,
+    "date": "2020-09-15",
+    "age_months": 6,
+    "weight": 7.8,
+    "height": 67,
+    "head_circumference": 43.5,
+    "notes": "Healthy development"
+  },
+  {
+    "id": 4,
+    "date": "2021-03-15",
+    "age_months": 12,
+    "weight": 9.5,
+    "height": 75,
+    "head_circumference": 46.2,
+    "notes": "First birthday checkup"
+  },
+  {
+    "id": 5,
+    "date": "2021-09-15",
+    "age_months": 18,
+    "weight": 11.2,
+    "height": 82,
+    "head_circumference": 48.1,
+    "notes": "Excellent progress"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "data": {
+    "current_subscription": {
+      "plan": "premium",
+      "tier": 2,
+      "status": "active",
+      "next_billing_date": "2024-02-15",
+      "amount": "$19.99"
+    },
+    "billing_history": [
+      {
+        "id": "inv_1ABC123DEF456",
+        "date": "2024-01-15",
+        "amount": "$19.99",
+        "plan": "premium",
+        "status": "paid",
+        "payment_method": "Visa ending in 4242"
+      },
+      {
+        "id": "inv_2XYZ789ABC012",
+        "date": "2023-12-15",
+        "amount": "$19.99",
+        "plan": "premium",
+        "status": "paid",
+        "payment_method": "Visa ending in 4242"
+      }
+    ]
+  }
+}

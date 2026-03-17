@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "message": "Tips fetched successfully.",
+    "data": {
+      "generalTips": [
+        {
+          "id": 1,
+          "tip": "Spend at least 15 minutes of quality time with your child each day...",
+          "favorite": false
+        },
+        {
+          "id": 2,
+          "tip": "Create a consistent bedtime routine...",
+          "favorite": true
+        }
+      ],
+      "nutritionalTips": [
+        {
+          "id": 1,
+          "tip": "Offer a variety of colors on the plate..."
+        },
+        {
+          "id": 2,
+          "tip": "Include healthy fats like avocado and nut butters..."
+        }
+      ]
+    }
+  }

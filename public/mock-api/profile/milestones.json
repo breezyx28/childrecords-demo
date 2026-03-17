@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "data": {
+    "child": {
+      "id": 1,
+      "name": "Emma Johnson",
+      "age": "2 years 3 months"
+    },
+    "achieved_milestones": [
+      {
+        "id": 1,
+        "title": "Walks independently",
+        "category": "Physical Development",
+        "completion_date": "2022-08-15",
+        "age_achieved": "14 months",
+        "photo": "/assets/images/milestones/photos/walking.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Says 10+ words",
+        "category": "Language Development",
+        "completion_date": "2022-12-20",
+        "age_achieved": "18 months",
+        "photo": "/assets/images/milestones/photos/talking.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Feeds self with spoon",
+        "category": "Physical Development",
+        "completion_date": "2023-03-10",
+        "age_achieved": "20 months",
+        "photo": null
+      }
+    ],
+    "total_achieved": 15,
+    "completion_rate": 75
+  }
+}

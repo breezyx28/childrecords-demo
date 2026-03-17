@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "name": "Emma Johnson",
+    "gender": "girl",
+    "birthday": "2 years",
+    "weight": "12 KG",
+    "height": "85 CM",
+    "photo": "/assets/images/children/child-1.jpg",
+    "selected": true,
+    "age": "2 years 3 months",
+    "height_percentile": 75,
+    "weight_percentile": 68,
+    "created_at": "2024-01-15T11:00:00.000000Z",
+    "updated_at": "2024-01-15T11:00:00.000000Z"
+  }
+}

@@ -1,0 +1,52 @@
+<svg
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <style>
+    /* Target the arrow to move diagonally upwards */
+    #arrow_path {
+      animation: arrowSurge 2s ease-in-out infinite;
+      transform-origin: bottom left;
+    }
+
+    /* Target bars to scale up sequentially */
+    #bar_1 { animation: barGrow 2s ease-in-out infinite 0.2s; transform-origin: bottom; }
+    #bar_2 { animation: barGrow 2s ease-in-out infinite 0.4s; transform-origin: bottom; }
+    #bar_3 { animation: barGrow 2s ease-in-out infinite 0.6s; transform-origin: bottom; }
+
+    @keyframes arrowSurge {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(3px, -5px); }
+    }
+
+    @keyframes barGrow {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(1.1); }
+    }
+  </style>
+
+  <!-- Axis -->
+  <path
+    d="M10 10 V54 H54"
+    fill="none"
+    stroke="#394cff"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+  <!-- Bars -->
+  <rect id="bar_1" x="16" y="40" width="8" height="14" rx="1" fill="#394cff" />
+  <rect id="bar_2" x="28" y="30" width="8" height="24" rx="1" fill="#ffb74d" />
+  <rect id="bar_3" x="40" y="18" width="8" height="36" rx="1" fill="#ffb74d" />
+
+  <!-- Arrow Path -->
+  <path
+    id="arrow_path"
+    d="M15 45 L35 25 L45 30 L55 15 M55 15 H50 M55 15 V20"
+    fill="none"
+    stroke="#394cff"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

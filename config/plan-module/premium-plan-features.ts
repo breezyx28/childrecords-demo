@@ -1,0 +1,42 @@
+export const monthly = {
+  id: 3,
+  slug: "premium",
+  tag: "Best Value",
+  title: "Premium monthly",
+  price: "19.98",
+  period: "month",
+  tier: "monthly",
+  subtitle: "Up to 3 children, including all features from the Basic Plan.",
+  features: [
+    "Upto 3 children",
+    "Monitoring growth",
+    "Monthly updated report",
+    "Daily tips and articles",
+    "Tracking milestone development",
+    "Share your lovely moments by uploading your picture",
+    "Uploading reports",
+    "Supports",
+  ],
+};
+
+export const yearly = {
+  id: 3,
+  slug: "premium",
+  tag: "Best Value",
+  title: "Premium yearly",
+  price: "179.88",
+  old_price: null,
+  period: "year",
+  tier: "yearly",
+  subtitle: "Up to 3 children, including all features from the Basic Plan.",
+  features: [
+    "Upto 3 children",
+    "Monitoring growth",
+    "Monthly updated report",
+    "Daily tips and articles",
+    "Tracking milestone development",
+    "Share your lovely moments by uploading your picture",
+    "Uploading reports",
+    "Supports",
+  ],
+};

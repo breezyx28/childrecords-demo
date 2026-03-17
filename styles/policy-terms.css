@@ -1,0 +1,14 @@
+article > section {
+  @apply md:mb-[1.2rem] mb-[0.65rem];
+}
+article > section > h2 {
+  @apply text-black md:text-[24px] text-[18px] font-[800] md:leading-[32.74px] leading-[26px] md:pb-[1rem] pb-[0.5rem];
+}
+
+section > *:not(h2) {
+  @apply text-[#0F1B31] md:text-[16px] text-[14px] font-[500] md:leading-[22.32px] leading-[18px];
+}
+
+section > ul > li::before {
+  content: "- "; /* Add a dash before each list item */
+}

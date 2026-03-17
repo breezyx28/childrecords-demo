@@ -1,0 +1,52 @@
+/* Dashboard nav: spacing, touch targets, and hover/active states */
+
+.dash-nav-links .dash-link-wrapper {
+  @apply text-[#83868B] flex items-center gap-x-[28px];
+}
+
+.dash-nav-links .dash-link-wrapper .dash-nav-link {
+  @apply flex items-center text-[14px] font-[700] leading-[18.2px];
+}
+
+.dash-nav-links .dash-link-wrapper .dash-nav-link .dash-nav-link-a {
+  @apply flex items-center gap-x-[10px] rounded-lg py-2.5 px-3 min-h-[44px]
+    text-[#83868B] cursor-pointer transition-colors duration-200 ease-out;
+}
+
+.dash-nav-links .dash-link-wrapper .dash-nav-link .dash-nav-link-a:hover {
+  @apply text-primary-600 bg-primary-50;
+}
+
+.dash-nav-links .dash-link-wrapper .dash-nav-link.dash-nav-link-active .dash-nav-link-a {
+  @apply bg-primary-50/60 text-primary-600;
+}
+
+.dash-nav-links .dash-link-wrapper .dash-nav-link .dash-nav-icon {
+  @apply shrink-0 w-5 h-5 text-current;
+}
+
+.dash-nav-account {
+  @apply text-[#83868B] flex justify-end items-center gap-x-[20px];
+}
+
+.dash-nav-account .dash-notification-icon {
+  @apply flex items-center justify-center rounded-lg
+    transition-colors duration-200 ease-out hover:bg-primary-50 hover:text-primary-600;
+}
+
+.dash-nav-account .dash-notification-icon svg {
+  @apply w-5 h-5;
+}
+
+.dash-nav-account .dash-profile-trigger:hover {
+  @apply bg-primary-50;
+}
+
+.dash-nav-account .dash-profile-trigger {
+  @apply transition-colors duration-200 ease-out;
+}
+
+
+.dash-nav-account-thumb {
+  @apply rounded-full bg-gray-600 p-[7px] max-w-[64px] max-h-[64px] min-w-[35px] min-h-[35px] text-white text-[14px] font-[800] leading-[19.1px];
+}

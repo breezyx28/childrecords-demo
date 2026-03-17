@@ -1,0 +1,6 @@
+.login-form {
+  @apply lg:w-1/2 w-full lg:px-[0px] px-[20px] flex flex-col justify-between;
+}
+.login-cover {
+  @apply lg:block hidden w-1/2 relative w-1/2 bg-primary-600;
+}

@@ -1,0 +1,10 @@
+.child-switch-prop {
+  @apply px-[16px] flex flex-col items-start gap-y-[8px];
+  /* @apply px-[16px] flex flex-col md:items-end items-start gap-y-[8px]; */
+
+  /* Remove padding-left for the first child on screens smaller than md */
+  @apply first:pl-0 pr-[10px];
+
+  /* Reapply padding-left for md and larger */
+  @apply md:first:pl-[16px];
+}

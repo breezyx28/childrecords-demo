@@ -1,0 +1,6 @@
+# Child Records - https://childrecords.care
+User-agent: *
+Allow: /
+
+# Sitemap (generate dynamically or add static sitemap.xml when ready)
+# Sitemap: https://childrecords.care/sitemap.xml

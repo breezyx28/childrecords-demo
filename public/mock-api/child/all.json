@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "name": "Emma Johnson",
+      "gender": "girl",
+      "birthday": "2 years",
+      "weight": "12 KG",
+      "height": "85 CM",
+      "photo": "/assets/images/children/child-1.jpg",
+      "selected": true,
+      "age": "2 years 3 months",
+      "height_percentile": 75,
+      "weight_percentile": 68
+    },
+    {
+      "id": 2,
+      "name": "Lucas Johnson",
+      "gender": "boy",
+      "birthday": "6 months",
+      "weight": "8 KG",
+      "height": "68 CM",
+      "photo": "/assets/images/children/child-2.jpg",
+      "selected": false,
+      "age": "6 months 2 weeks",
+      "height_percentile": 82,
+      "weight_percentile": 76
+    }
+  ]
+}
