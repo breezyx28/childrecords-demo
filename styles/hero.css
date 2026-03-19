@@ -20,7 +20,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%); /* Scrolls exactly one full set of cards */
+    transform: translateY(-50%); /* With two stacked sets, -50% yields a seamless loop */
   }
 }
 

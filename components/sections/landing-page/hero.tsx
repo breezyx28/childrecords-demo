@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { twMerge } from "tailwind-merge";
@@ -250,47 +248,124 @@ const imagesAttributes = [
   },
 ];
 
+/** Tiny SVG used as LQIP-style placeholder (no Next.js image optimizer in Vite). */
+const HERO_IMAGE_BLUR_DATA_URL =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjU2JyBoZWlnaHQ9JzI4Nicgdmlld0JveD0nMCAwIDI1NiAyODYnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHJlY3Qgd2lkdGg9JzI1NicgaGVpZ2h0PScyODYnIGZpbGw9JyNlMmU4ZjAnLz48L3N2Zz4=";
+
+type NetworkInformation = {
+  effectiveType?: string;
+  saveData?: boolean;
+  addEventListener?: (type: string, listener: () => void) => void;
+  removeEventListener?: (type: string, listener: () => void) => void;
+};
+
+function useSlowConnection(): boolean {
+  const [slow, setSlow] = useState(false);
+
+  useEffect(() => {
+    if (typeof navigator === "undefined") return;
+
+    const connection = (navigator as Navigator & { connection?: NetworkInformation })
+      .connection;
+
+    const evaluate = () => {
+      if (!connection) {
+        setSlow(false);
+        return;
+      }
+      const type = connection.effectiveType ?? "";
+      const isSlow =
+        Boolean(connection.saveData) ||
+        type === "slow-2g" ||
+        type === "2g";
+      setSlow(isSlow);
+    };
+
+    evaluate();
+
+    connection?.addEventListener?.("change", evaluate);
+    return () => connection?.removeEventListener?.("change", evaluate);
+  }, []);
+
+  return slow;
+}
+
 const ImageItem = ({
   id,
   src,
   appendClasses,
+  fetchPriority,
 }: {
   id: number;
   src: string;
   appendClasses: string | null;
-}) => (
-  <BlurFade key={id} delay={0.25 + id * 0.05} inView>
-    <img
-      src={typeof src === "string" ? src : ""}
-      alt="child-record"
-      width={720}
-      height={720}
-      className={twMerge(
-        "border border-[2px] border-white rounded-[22.16px]",
-        appendClasses
-      )}
-      style={{
-        width: "256px",
-        height: "286px",
-        objectFit: "cover",
-      }}
-    />
-  </BlurFade>
-);
+  fetchPriority: "high" | "low" | "auto";
+}) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <BlurFade key={id} delay={0.25 + id * 0.05} inView>
+      <div
+        className={twMerge(
+          "relative overflow-hidden border border-[2px] border-white rounded-[22.16px]",
+          appendClasses
+        )}
+        style={{ width: "256px", height: "286px" }}
+      >
+        {/* Low-quality visual first; full JPEG loads in background */}
+        <div
+          aria-hidden
+          className={twMerge(
+            "pointer-events-none absolute inset-0 scale-110 bg-cover bg-center transition-opacity duration-500",
+            loaded ? "opacity-0" : "opacity-100"
+          )}
+          style={{
+            backgroundImage: `url("${HERO_IMAGE_BLUR_DATA_URL}")`,
+            filter: "blur(14px)",
+          }}
+        />
+        <img
+          src={typeof src === "string" ? src : ""}
+          alt="child-record"
+          width={256}
+          height={286}
+          loading="lazy"
+          decoding="async"
+          fetchPriority={fetchPriority}
+          onLoad={() => setLoaded(true)}
+          className={twMerge(
+            "relative z-10 block h-full w-full rounded-[20px] object-cover transition-opacity duration-500",
+            loaded ? "opacity-100" : "opacity-0"
+          )}
+        />
+      </div>
+    </BlurFade>
+  );
+};
+
+const RenderHeroImages = () => {
+  const isSlowConnection = useSlowConnection();
+  const fetchPriority: "high" | "low" | "auto" = isSlowConnection ? "low" : "auto";
+
+  return (
+    <div className="hero-imgs-cards-wrapper">
+      {/* Render the images twice to create a seamless loop */}
+      {[...imagesAttributes, ...imagesAttributes].map((image, index) => (
+        <div className="hero-img-card" key={`${image.id}-${index}`}>
+          {ImageItem({
+            id: image.id,
+            src: image.src,
+            appendClasses: image.classes,
+            fetchPriority,
+          })}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const renderHeroImages = (
-  <div className="hero-imgs-cards-wrapper">
-    {/* Render the images twice to create a seamless loop */}
-    {[...imagesAttributes, ...imagesAttributes].map((image, index) => (
-      <div className="hero-img-card" key={`${image.id}-${index}`}>
-        {ImageItem({
-          id: image.id,
-          src: image.src,
-          appendClasses: image.classes,
-        })}
-      </div>
-    ))}
-  </div>
+  <RenderHeroImages />
 );
 
 export default Hero;
