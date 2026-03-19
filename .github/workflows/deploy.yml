@@ -29,12 +29,10 @@ jobs:
       - name: Clear old build on server
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SSH_HOST }}
+          host: kat-jr.com
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          timeout: 60s
-          command_timeout: 20m
           script: |
             set -e
             WEB_ROOT="/var/www/html/childrecord"
@@ -44,23 +42,20 @@ jobs:
       - name: Copy dist folder to server
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.SSH_HOST }}
+          host: kat-jr.com
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          timeout: 60s
           source: dist
           target: /var/www/html/childrecord
 
       - name: Flatten dist into web root
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SSH_HOST }}
+          host: kat-jr.com
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          timeout: 60s
-          command_timeout: 20m
           script: |
             set -e
             WEB_ROOT="/var/www/html/childrecord"
