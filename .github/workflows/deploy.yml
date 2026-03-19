@@ -39,13 +39,32 @@ jobs:
             sudo mkdir -p "$WEB_ROOT"
             sudo rm -rf "${WEB_ROOT:?}/"*
 
-      - name: Copy dist to server
+      - name: Copy dist folder to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: kat-jr.com
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          source: dist/*
+          source: dist
           target: /var/www/html/childrecord
+
+      - name: Flatten dist into web root
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: kat-jr.com
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            set -e
+            WEB_ROOT="/var/www/html/childrecord"
+            DIST_DIR="$WEB_ROOT/dist"
+
+            if [ -d "$DIST_DIR" ]; then
+              # Move build contents up one level
+              sudo cp -r "$DIST_DIR/." "$WEB_ROOT"
+              # Remove the now-empty dist directory
+              sudo rm -rf "$DIST_DIR"
+            fi
 
