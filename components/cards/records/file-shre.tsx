@@ -5,16 +5,14 @@ import { toast } from "sonner";
 import { Share04 } from "untitledui-js";
 
 type TFileShare = {
-  url: string;
+  url?: string;
   title: string;
   text: string;
   id: number;
 };
-export const FileShare = ({ text, title, url, id }: TFileShare) => {
-  console.log("id: ", id);
-
+export const FileShare = ({ text, title, url = "", id }: TFileShare) => {
   const fileUrlSharing = async () => {
-    const fileUrl = url; // Replace with your file URL
+    const fileUrl = url;
 
     const data = {
       title,

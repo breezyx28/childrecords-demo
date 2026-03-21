@@ -17,6 +17,8 @@ const FileCard = ({ data }: FileProps) => {
   const date = data.created_at ?? (data as any).date;
   const description = data.description ?? "";
   const size = data.size ?? (data as any).file_size;
+  const file_url = data.file_url;
+  const file_type = data.file_type ?? (data as any).file_type;
 
   const isMdOrSmaller = useMediaQuery("(max-width: 768px)");
   const isMdOrLarger = useMediaQuery("(min-width: 768px)");
@@ -34,7 +36,13 @@ const FileCard = ({ data }: FileProps) => {
           <span className="flex items-center border rounded-full p-1">
             <FileOptions
               id={id}
-              fileData={{ filename, created_at: date, description }}
+              fileData={{
+                filename,
+                created_at: date,
+                description,
+                file_url,
+                file_type,
+              }}
             />
           </span>
         )}
@@ -49,7 +57,13 @@ const FileCard = ({ data }: FileProps) => {
               <span className="flex items-center group-hover:opacity-100 opacity-0">
                 <FileOptions
                   id={id}
-                  fileData={{ filename, created_at: date, description }}
+                  fileData={{
+                    filename,
+                    created_at: date,
+                    description,
+                    file_url,
+                    file_type,
+                  }}
                 />
               </span>
             )}

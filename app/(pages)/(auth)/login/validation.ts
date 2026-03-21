@@ -1,7 +1,7 @@
 "use client";
 
 import { YupValidation } from "@/validator/Validation/YupValidation";
-import { object, string, number } from "yup";
+import { object, string } from "yup";
 
 export class LoginValidation extends YupValidation {
   constructor() {
@@ -18,7 +18,7 @@ export class LoginValidation extends YupValidation {
       .email("email should be in email form")
       .required("Email is required"),
     password: string()
-      .min(8, "minimum length of password is 8 charecters")
-      .required("password is required"),
+      .min(1, "Password is required")
+      .required("Password is required"),
   });
 }

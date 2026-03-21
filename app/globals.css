@@ -86,6 +86,16 @@
 html {
   scroll-behavior: smooth !important;
   scrollbar-gutter: stable;
+  /* Prevent horizontal scroll from 100vw, off-canvas transforms, and animated overflow */
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .smooth-scroll {
@@ -98,7 +108,7 @@ html {
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden max-w-full min-w-0;
   }
 }
 
@@ -125,11 +135,12 @@ html {
   }
   /* upper mobile nav */
   .mobile-responsive {
-    @apply bg-white w-screen fixed top-0 left-0 px-5 py-4 md:hidden flex justify-between items-center z-[999];
+    /* left-0 right-0 + w-full avoids 100vw scrollbar overflow on Windows */
+    @apply bg-white fixed top-0 left-0 right-0 w-full max-w-full min-w-0 px-5 py-4 md:hidden flex justify-between items-center z-[999];
   }
   /* upper Auth mobile nav */
   .auth-mobile-responsive {
-    @apply bg-white w-screen fixed top-0 left-0 px-10 py-4 md:py-0 md:hidden flex justify-between items-center z-[999];
+    @apply bg-white fixed top-0 left-0 right-0 w-full max-w-full min-w-0 px-10 py-4 md:py-0 md:hidden flex justify-between items-center z-[999];
   }
   /* upper mobile nav */
   .desktop-responsive {
@@ -223,7 +234,7 @@ html {
   /* Responsive */
   .responsive {
     /* @apply md:px-[100px] px-[25px] h-auto w-full mx-auto; */
-    @apply md:px-[100px] px-[25px] h-auto max-w-[1440px] w-full mx-auto;
+    @apply md:px-[100px] px-[25px] h-auto max-w-[1440px] w-full min-w-0 mx-auto;
   }
   .design-container {
     @apply h-auto max-w-[1440px] w-full mx-auto;

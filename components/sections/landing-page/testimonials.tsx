@@ -13,7 +13,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="w-screen mx-auto h-auto md:p-[100px] px-[20px] py-[50px] bg-primary-100"
+      className="mx-auto h-auto w-full min-w-0 max-w-full bg-primary-100 px-[20px] py-[50px] md:p-[100px]"
       dir="ltr"
     >
       <div className="max-w-[1440px] w-full mx-auto">

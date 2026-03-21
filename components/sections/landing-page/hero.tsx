@@ -52,16 +52,18 @@ const Hero = () => {
     return text;
   };
 
+  /** Clouds fade out before the layout edge — short path + opacity hits 0 by ~72% of cycle + edge mask */
   const cloudMotion = (duration: number, delay: number) => ({
-    initial: { x: "-50%", opacity: 0 }, // Start slightly off-screen
+    initial: { x: "-40%", opacity: 0 },
     animate: {
-      x: ["-50%", "100%"], // Move from left (slightly off-screen) to the right edge
-      opacity: [0, 1, 1, 0], // Fade in, stay visible, and then fade out
+      x: ["-40%", "8%", "36%", "58%"],
+      opacity: [0, 1, 1, 0],
       transition: {
-        repeat: Infinity, // Infinite loop
-        duration, // Different duration for each cloud
-        ease: "linear", // Linear motion for smoothness
-        delay, // Delay start for each cloud for a staggered effect
+        repeat: Infinity,
+        duration,
+        ease: "linear",
+        delay,
+        times: [0, 0.12, 0.35, 1],
       },
     },
   });
@@ -73,8 +75,8 @@ const Hero = () => {
         className="w-full h-auto bg-primary-600 overflow-hidden"
       >
       
-        <div className="relative w-full md:min-h-[558px] min-h-[470px] flex md:gap-x-[180px] gap-x-[0px] responsive">
-          <div className="w-full gap-y-[32px] flex flex-col justify-center md:max-w-[437px] max-w-full z-[10]">
+        <div className="relative flex w-full min-w-0 max-w-full overflow-x-hidden md:min-h-[558px] min-h-[470px] md:gap-x-[180px] gap-x-0 responsive">
+          <div className="z-[10] flex w-full min-w-0 max-w-full flex-col justify-center gap-y-[32px] md:max-w-[437px]">
             <div className="flex flex-col gap-y-[8px] md:max-w-[384px] max-w-[800px]">
               <BlurFade delay={0.25} inView>
                 <div className="overflow-hidden py-2">
@@ -143,9 +145,12 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Cloud and image animation */}
-          <div className="md:relative absolute w-full z-2">
-            <div className="left-0 w-full h-full absolute z-1">
+          {/* Cloud and image animation — clouds z-0 so they sit behind the image slider (z-10) */}
+          <div className="absolute z-[2] w-full min-w-0 max-w-full overflow-hidden md:relative">
+            <div
+              className="pointer-events-none absolute left-0 top-0 z-0 h-full w-full min-w-0 overflow-hidden [mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_78%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_6%,black_78%,transparent_100%)]"
+              aria-hidden
+            >
               <motion.div
                 {...cloudMotion(25, 0)}
                 className="absolute top-[10%] left-[0%] md:left-[55%]"
@@ -192,8 +197,8 @@ const Hero = () => {
               </motion.div>
             </div>
 
-            <div className="relative md:block hidden w-[543.01px] h-[628px] overflow-hidden z-2">
-              <div className="absolute size-full top-[50px]">
+            <div className="relative z-10 hidden h-[628px] w-[543.01px] overflow-hidden md:block">
+              <div className="absolute top-[50px] size-full">
                 {renderHeroImages}
               </div>
             </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden max-w-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,8 +52,8 @@
       :root { --font-nunito: 'Nunito', sans-serif; }
     </style>
   </head>
-  <body class="overflow-x-hidden bg-gradient max-w-[1800px]" style="font-family: var(--font-nunito); margin: 0 auto;" suppressHydrationWarning>
-    <div id="root"></div>
+  <body class="overflow-x-hidden bg-gradient max-w-full min-w-0" style="font-family: var(--font-nunito); margin: 0 auto; max-width: 1800px;" suppressHydrationWarning>
+    <div id="root" class="min-w-0"></div>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script type="module" src="/main.tsx"></script>
   </body>

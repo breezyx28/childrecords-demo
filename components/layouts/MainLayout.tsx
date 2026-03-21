@@ -26,8 +26,8 @@ export default function MainLayout({
     <>
       <UpperNav />
       <div className="h-[88px] w-full"></div> {/* Placeholder for upper-nav */}
-      <div className="w-screen flex justify-center">
-        <div className="wrapp">{children}</div>
+      <div className="flex w-full min-w-0 max-w-full justify-center overflow-x-hidden">
+        <div className="wrapp w-full min-w-0 max-w-full">{children}</div>
       </div>
       <Footer />
     </>

@@ -154,7 +154,7 @@ const Plans = () => {
   return (
     <section
       id="plans"
-      className="w-screen mx-auto h-auto md:py-[100px] py-[20px] bg-primary-100"
+      className="mx-auto h-auto w-full min-w-0 max-w-full bg-primary-100 py-[20px] md:py-[100px]"
     >
       <div className="wrapper responsive">
         <div className="flex flex-col items-center mb-[33px]">

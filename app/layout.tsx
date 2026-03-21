@@ -36,13 +36,17 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html
+      lang="en"
+      className="overflow-x-hidden max-w-full"
+      suppressHydrationWarning={true}
+    >
       <head>
       <meta name="google-site-verification" content="lOwzWFefOzez5j3RVwNvDNRN4KetsO_-qWH95VX7IIE" />
       </head>
       <body
         dir={"ltr"}
-        className={`overflow-x-hidden bg-gradient max-w-[1800px]`}
+        className={`min-w-0 w-full max-w-[1800px] overflow-x-hidden bg-gradient`}
         // className={`${nunito.className} overflow-x-hidden bg-gradient max-w-[1800px]`}
         suppressHydrationWarning={true}
       >

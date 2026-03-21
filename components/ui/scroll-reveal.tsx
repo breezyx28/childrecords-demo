@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView, Variants } from "framer-motion";
+import { twMerge } from "tailwind-merge";
 
 const defaultEase = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -98,7 +99,10 @@ export function ScrollReveal({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants}
-      className={className}
+      className={twMerge(
+        "w-full min-w-0 max-w-full overflow-x-clip",
+        className
+      )}
     >
       {children}
     </motion.div>

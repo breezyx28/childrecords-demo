@@ -6,6 +6,10 @@ export type TRecordsFile = {
   id: number;
   size: string;
   type: "folder";
+  /** Present in mock `files.json` — used for view / copy / download / share without preview API */
+  file_url?: string;
+  /** e.g. `pdf` | `image` — used for correct inline preview when URL extension is ambiguous */
+  file_type?: string;
 };
 
 export type TRecordsFiles = TRecordsFile[];

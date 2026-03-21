@@ -1,5 +1,3 @@
-import React from "react";
-
 // Function to load and display the PDF content
 const PdfViewer = (url: string) => {
   var pdfPreview = document.getElementById("pdfPreview");
