@@ -1,140 +1,62 @@
 # Child Record Application
 
-A comprehensive Next.js application for managing and tracking children's health records, growth charts, and milestones.
+Child Record is a family-focused web application that helps parents track their children's growth, health records, and milestones in one place. It combines profile management, visual growth tracking, and milestone history so caregivers can monitor progress over time with a simple dashboard experience.
 
-## Tech Stack
+## Live Website
 
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **State Management**: Redux Toolkit
-- **API Handling**: RTK Query for API calls and caching
-- **UI Components**: Material-UI, Shadcn, DaisyUI
-- **Form Handling**: React Hook Form
-- **Data Visualization**: Recharts
-- **Authentication**: Custom OAuth implementation with cookie-based session management
-- **Date Handling**: Day.js
-- **Type Checking**: TypeScript
+- **Domain**: [https://childrecord.kat-jr.com/](https://childrecord.kat-jr.com/)
 
-## Data Management & Authentication
+## What This Website Is For
 
-The application uses Redux Toolkit Query (RTK Query) for efficient API handling, providing:
+Based on the product landing experience, Child Record is designed to help families:
 
-- Automatic caching and cache invalidation
-- Real-time data synchronization
-- Optimistic updates
-- Type-safe API calls
+- Track child growth and development over time
+- Record milestones and important life moments
+- Manage child profiles and health-related records
+- Get a clear dashboard view of each child's progress
+- Use a mobile-friendly interface for day-to-day updates
 
-Authentication flow:
+## Product Screens
 
-1. Google OAuth for user authentication
-2. Cookie-based session management for persistent user sessions
-3. Secure token storage in HTTP-only cookies
-4. Automatic token refresh handling
+### Landing Page
 
-## Prerequisites
+![Landing Page](./screens/landing-page.png)
 
-- Node.js 18+
-- npm or yarn
-- Git
+### Dashboard
 
-## Getting Started
+![Dashboard Page](./screens/dashboard-page.png)
 
-1. **Clone the repository**
+### Child Profile
 
-   ```bash
-   git clone https://github.com/breezyx28/child-record
-   cd child-record
-   ```
+![Profile Children Page](./screens/profile-children-page.png)
 
-2. **Install dependencies**
+### Growth Charts
 
-   ```bash
-   npm install
-   ```
+![Growth Charts Page](./screens/growth-charts-page.png)
 
-3. **Environment Setup**
-   Create a `.env.local` file with the following variables:
+### Milestones
 
-   ```env
-   NEXT_PUBLIC_API_URL=your_api_url
-   NEXT_PUBLIC_DOMAIN_URL="your_website_url"
-   NEXT_PUBLIC_API_IMAGES="your_api_image_url
-   NEXT_PUBLIC_GA_ID=your_google_client_id
-   ```
+![Milestones Page](./screens/milestones-page.png)
 
-4. **Development Server**
+## Core Services
 
-   ```bash
-   # Run on port 5000
-   npm run dev
+Child Record helps families keep all child development information in one organized place:
 
-   # Run master branch on port 4000
-   npm run dev:master
-   ```
+- **Child Profiles**: Create and manage each child's personal and health-related information.
+- **Growth Tracking**: Monitor development through visual charts and progress history.
+- **Milestone Journal**: Record important moments and developmental achievements.
+- **Progress Dashboard**: View each child's overall status from one clear screen.
+- **Anytime Access**: Use the platform online from mobile or desktop whenever needed.
 
-## Project Structure
+## Who It Helps
 
-```
-child-record/
-├── app/                    # Next.js 14 app directory
-│   ├── (pages)/           # Route groups
-│   ├── dashboard/         # Dashboard routes
-│   └── layout.tsx         # Root layout
-├── components/            # Reusable components
-│   ├── ui/               # UI components
-│   ├── charts/           # Chart components
-│   └── sections/         # Page sections
-├── redux/                # Redux store and slices
-├── hooks/                # Custom React hooks
-├── styles/               # Global styles
-├── types/                # TypeScript types
-├── utils/                # Utility functions
-└── validator/            # Form validation schemas
-```
+- Parents who want a structured way to follow their child's development
+- Families managing records for more than one child
+- Caregivers who need a quick, simple view of growth and milestone history
 
-## Key Features
+## Why Families Use Child Record
 
-- 📊 Growth Charts
-- 📝 Health Records Management
-- 🎯 Milestone Tracking
-- 📱 Responsive Design
-- 🔐 Google Authentication
-- 📅 Appointment Scheduling
-- 📈 Progress Monitoring
-
-## Available Scripts
-
-- `npm run dev` - Start development server on port 5000
-- `npm run build` - Build production application
-- `npm run start` - Start production server on port 4040
-- `npm run lint` - Run ESLint
-- `npm run tsc` - Type check TypeScript
-- `npm run deploy` - Build and deploy production
-- `npm run deploy-dev` - Build and deploy development
-
-## Deployment
-
-The application can be deployed using the following commands:
-
-```bash
-# Production Deployment
-npm run deploy
-
-# Development Deployment
-npm run deploy-dev
-```
-
-## Contributing
-
-1. Create a feature branch
-2. Make your changes
-3. Run tests and type checking
-4. Submit a pull request
-
-## License
-
-This project is private and proprietary.
-
-## Support
-
-For support, please contact the development team or raise an issue in the repository.
+- Keeps records centralized and easy to review
+- Makes growth patterns easier to understand
+- Helps preserve important childhood moments
+- Reduces the hassle of scattered notes and manual tracking
